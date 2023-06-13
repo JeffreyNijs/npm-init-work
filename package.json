@@ -1,6 +1,6 @@
 {
   "name": "create-setup-vue",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Custom npm init command for work-related projects",
   "bin": {
     "npm-init-work": "index.js"
