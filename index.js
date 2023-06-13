@@ -35,7 +35,19 @@ const prompts = require('prompts');
             message: 'Install Vite?',
             initial: true,
         },
-        // Add more questions for additional packages here
+        {
+            type: 'multiselect',
+            name: 'optionals',
+            message: 'Select optional packages to install:',
+            choices: [
+                { title: 'i18n', value: 'i18n' },
+                { title: 'ESLint', value: 'eslint' },
+                { title: 'histoire', value: 'histoire' },
+                { title: 'Day.js', value: 'dayjs' },
+                { title: 'libphonenumber-js', value: 'libphonenumber' },
+                { title: 'PrimeVue', value: 'primevue' },
+            ],
+        },
     ];
 
     const response = await prompts(questions);
@@ -55,7 +67,32 @@ const prompts = require('prompts');
     if (response.vite) {
         execSync('npm install vite');
     }
-    // Add more installation commands for additional packages here
+
+    const selectedOptionals = response.optionals || [];
+    selectedOptionals.forEach((optional) => {
+        switch (optional) {
+            case 'i18n':
+                execSync('npm install i18n');
+                break;
+            case 'eslint':
+                execSync('npm install eslint');
+                break;
+            case 'histoire':
+                execSync('npm install histoire');
+                break;
+            case 'dayjs':
+                execSync('npm install dayjs');
+                break;
+            case 'libphonenumber':
+                execSync('npm install libphonenumber-js');
+                break;
+            case 'primevue':
+                execSync('npm install primevue');
+                break;
+            default:
+                break;
+        }
+    });
 
     console.log('Project setup completed!');
 })();
