@@ -1,5 +1,5 @@
 {
-  "name": "create-work",
+  "name": "create-setup-vue",
   "version": "1.0.0",
   "description": "Custom npm init command for work-related projects",
   "bin": {
