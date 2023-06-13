@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "Custom npm init command for work-related projects",
   "bin": {
-    "npm-init-work": "./index.ts"
+    "npm-init-work": "index.js"
   },
   "scripts": {
-    "start": "ts-node index.ts"
+    "start": "ts-node index.js"
   },
   "dependencies": {
     "prompts": "^2.4.1",

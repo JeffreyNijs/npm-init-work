@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-import { execSync } from 'child_process';
-import prompts from 'prompts';
+const { execSync } = require('child_process');
+const prompts = require('prompts');
 
 (async () => {
     const questions = [
