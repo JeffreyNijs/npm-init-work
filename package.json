@@ -1,5 +1,5 @@
 {
-  "name": "npm-init-work",
+  "name": "create-work",
   "version": "1.0.0",
   "description": "Custom npm init command for work-related projects",
   "bin": {
